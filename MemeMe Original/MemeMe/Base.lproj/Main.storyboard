@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UHZ-be-70I">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="impact.ttf">
+            <string>Impact</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="c1n-sd-9oK">
+            <objects>
+                <viewController id="UHZ-be-70I" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ueS-9I-3tx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hcY-mW-7Re">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZU-Mc-oAm">
+                                <rect key="frame" x="73" y="529" width="229" height="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-jI-sWL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="jXU-DJ-UkS">
+                                        <connections>
+                                            <action selector="sharememeWithSender:" destination="UHZ-be-70I" id="RBs-rb-NXG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rzu-Nt-A5e"/>
+                                    <barButtonItem systemItem="cancel" id="JAJ-Pn-x5R">
+                                        <connections>
+                                            <action selector="cancelActionWithSender:" destination="UHZ-be-70I" id="mSG-uM-Ara"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvI-wF-MhN">
+                                <rect key="frame" x="73" y="99" width="229" height="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlinecolor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outlinewidth">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-4R-sOv">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bZu-pj-cDo"/>
+                                    <barButtonItem title="Pick Image" width="386" id="STu-TL-q4D">
+                                        <connections>
+                                            <action selector="ChooseImage:" destination="UHZ-be-70I" id="ite-52-Y9m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="637-6B-u1n"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9NW-4R-sOv" firstAttribute="leading" secondItem="5mF-Yn-gHe" secondAttribute="leading" id="0OG-Bd-Xbx"/>
+                            <constraint firstItem="hcY-mW-7Re" firstAttribute="trailing" secondItem="5mF-Yn-gHe" secondAttribute="trailing" id="0i0-1a-ZJb"/>
+                            <constraint firstItem="rvI-wF-MhN" firstAttribute="top" secondItem="gZ3-jI-sWL" secondAttribute="bottom" constant="35" id="0uu-If-wf1"/>
+                            <constraint firstItem="gZ3-jI-sWL" firstAttribute="top" secondItem="5mF-Yn-gHe" secondAttribute="top" id="7FW-V0-tzN"/>
+                            <constraint firstItem="hcY-mW-7Re" firstAttribute="bottom" secondItem="5mF-Yn-gHe" secondAttribute="bottom" id="DFS-bN-dMH"/>
+                            <constraint firstItem="5mF-Yn-gHe" firstAttribute="trailing" secondItem="rvI-wF-MhN" secondAttribute="trailing" constant="73" id="E9p-jc-PYy"/>
+                            <constraint firstItem="pZU-Mc-oAm" firstAttribute="leading" secondItem="5mF-Yn-gHe" secondAttribute="leading" constant="73" id="IEz-yw-rJY"/>
+                            <constraint firstItem="hcY-mW-7Re" firstAttribute="top" secondItem="5mF-Yn-gHe" secondAttribute="top" id="MJe-9s-Oj9"/>
+                            <constraint firstItem="9NW-4R-sOv" firstAttribute="bottom" secondItem="5mF-Yn-gHe" secondAttribute="bottom" id="NUV-KA-nvk"/>
+                            <constraint firstItem="rvI-wF-MhN" firstAttribute="leading" secondItem="5mF-Yn-gHe" secondAttribute="leading" constant="73" id="PpF-fV-bkm"/>
+                            <constraint firstItem="9NW-4R-sOv" firstAttribute="top" secondItem="pZU-Mc-oAm" secondAttribute="bottom" constant="33" id="T7S-VV-gVx"/>
+                            <constraint firstItem="9NW-4R-sOv" firstAttribute="trailing" secondItem="5mF-Yn-gHe" secondAttribute="trailing" id="WCL-5s-K5O"/>
+                            <constraint firstItem="gZ3-jI-sWL" firstAttribute="leading" secondItem="5mF-Yn-gHe" secondAttribute="leading" id="ZQf-Wi-kes"/>
+                            <constraint firstItem="gZ3-jI-sWL" firstAttribute="trailing" secondItem="5mF-Yn-gHe" secondAttribute="trailing" id="ehs-Xi-gtc"/>
+                            <constraint firstItem="hcY-mW-7Re" firstAttribute="leading" secondItem="5mF-Yn-gHe" secondAttribute="leading" id="lbB-Sy-lkh"/>
+                            <constraint firstItem="5mF-Yn-gHe" firstAttribute="trailing" secondItem="pZU-Mc-oAm" secondAttribute="trailing" constant="73" id="ln1-dI-TJ4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5mF-Yn-gHe"/>
+                    </view>
+                    <connections>
+                        <outlet property="Bottomtextfield" destination="pZU-Mc-oAm" id="8bZ-pC-L8Y"/>
+                        <outlet property="MemeView" destination="hcY-mW-7Re" id="cfT-Nt-buP"/>
+                        <outlet property="Sharebutton" destination="jXU-DJ-UkS" id="YvC-L5-LI7"/>
+                        <outlet property="Toptextfield" destination="rvI-wF-MhN" id="UEQ-GG-6mw"/>
+                        <outlet property="bottombar" destination="9NW-4R-sOv" id="IFt-Ng-Eeh"/>
+                        <outlet property="topbar" destination="gZ3-jI-sWL" id="EDg-hT-XKP"/>
+                        <outlet property="view" destination="ueS-9I-3tx" id="yyi-Zr-lTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acN-gF-rKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="121.88905547226388"/>
+        </scene>
+    </scenes>
+</document>
